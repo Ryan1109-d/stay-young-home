@@ -32,7 +32,8 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 
 /* ===== Nav ===== */
 .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:.5px solid var(--border);box-shadow:0 2px 12px rgba(18,58,99,.05);padding:0 1.75rem;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:900;color:var(--text-2);text-decoration:none;white-space:nowrap;letter-spacing:.03em}
+.nav-logo{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:900;color:var(--text-2);text-decoration:none;white-space:nowrap;letter-spacing:.03em;display:flex;align-items:center;gap:9px}
+.nav-logo img{height:36px;width:auto;display:block;flex-shrink:0}
 .nav-logo span{color:var(--text-muted);font-size:10px;font-weight:400;margin-left:8px;letter-spacing:.08em}
 .nav-links{display:flex;gap:1.4rem}
 .nav-links a{font-size:13px;color:var(--text-body);text-decoration:none;transition:color .15s}
@@ -138,7 +139,7 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
 <body>
 
 <nav class="nav">
-  <a class="nav-logo" href="#top">Stay Young <span>運動團隊</span></a>
+  <a class="nav-logo" href="#top"><img src="images/logo-mark.png" alt="Stay Young">Stay Young <span>運動團隊</span></a>
   <div class="nav-links">
     <a href="#camps">營隊</a>
     <a href="#about">關於我們</a>
