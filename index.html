@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stay Young 運動團隊｜兒童運動營隊</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="description" content="Stay Young 運動團隊 — 專業教練帶領的兒童運動營隊。2027 寒假開設清華大學足球冬令營與台灣大學羽球冬令營，零基礎友善、小班教學。">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-alt:#f2f6fa;
+  --card:#fbfcfe;
+  --card-light:#f2f6fa;
+  --border:#d9e2ec;
+  --border-soft:#e4ebf2;
+  --text:#1c2733;
+  --text-2:#22303f;
+  --text-body:#5a6b7c;
+  --text-muted:#7b8a99;
+  --text-faint:#9aa7b3;
+  --blue:#1560b8;
+  --blue-deep:#0f3f7d;
+  --navy:#0a2e57;
+  --amber:#f0930f;
+  --amber-light:#f7b955;
+  --orange:#e07b1f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text)}
+
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:.5px solid var(--border);box-shadow:0 2px 12px rgba(18,58,99,.05);padding:0 1.75rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{font-family:'Noto Serif TC',serif;font-size:17px;font-weight:900;color:var(--text-2);text-decoration:none;white-space:nowrap;letter-spacing:.03em}
+.nav-logo span{color:var(--text-muted);font-size:10px;font-weight:400;margin-left:8px;letter-spacing:.08em}
+.nav-links{display:flex;gap:1.4rem}
+.nav-links a{font-size:13px;color:var(--text-body);text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:var(--text-2)}
+.nav-cta{font-size:13px;font-weight:500;background:var(--blue);color:#fff;border:none;border-radius:6px;padding:8px 18px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.nav-cta:hover{background:#0f4a94}
+
+/* ===== Hero ===== */
+.hero{padding:5rem 1.75rem 5.5rem;text-align:center;position:relative;overflow:hidden;background:linear-gradient(180deg,#0a2e57 0%,#0f4183 40%,#2470c9 78%,#5ba4f0 100%)}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 75% 60% at 50% 0%,rgba(106,165,221,.25) 0%,transparent 70%),radial-gradient(ellipse 45% 45% at 88% 92%,rgba(242,180,92,.18) 0%,transparent 60%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 95%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 95%)}
+.hero>*{position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);color:#f2b45c;font-size:.8rem;font-weight:700;letter-spacing:.15em;padding:.42rem 1.4rem;border-radius:20px;margin-bottom:1.7rem;text-transform:uppercase}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(2.8rem,8vw,4.6rem);font-weight:900;line-height:1.12;margin-bottom:1.2rem;letter-spacing:.03em;color:#fff}
+.hero h1 em{color:#f2b45c;font-style:normal;position:relative;display:inline-block}
+.hero h1 em::after{content:'';position:absolute;left:-2%;right:-2%;bottom:.08em;height:.22em;background:rgba(240,147,15,.4);z-index:0;border-radius:3px;transform:rotate(-1deg)}
+.hero-sub{font-size:17px;color:#c3d6ee;line-height:1.85;max-width:480px;margin:0 auto 2.4rem}
+.hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-amber{display:inline-block;background:var(--amber);color:#1c2733;border:none;border-radius:8px;padding:.9rem 2.4rem;font-size:1rem;font-weight:700;letter-spacing:.05em;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,147,15,.45)}
+.btn-out{display:inline-block;background:transparent;color:#cfe0f2;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:.9rem 1.9rem;font-size:1rem;cursor:pointer;text-decoration:none;transition:background .2s}
+.btn-out:hover{background:rgba(255,255,255,.1)}
+
+.divider{text-align:center;padding:.7rem;font-size:11px;color:#6b87a3;letter-spacing:.07em;background:#e8eef5;border-bottom:.5px solid var(--border)}
+
+/* ===== Sections ===== */
+.sec{padding:5rem 1.75rem;border-bottom:.5px solid var(--border)}
+.sec.alt{background:var(--bg-alt)}
+.sec-inner{max-width:960px;margin:0 auto}
+.sl{font-size:.8rem;color:var(--amber);font-weight:700;letter-spacing:.25em;text-transform:uppercase;margin-bottom:.75rem}
+.st{font-family:'Noto Serif TC',serif;font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:900;margin-bottom:.9rem;line-height:1.25;letter-spacing:.04em}
+.ss{font-size:15px;color:var(--text-body);line-height:1.85;max-width:540px}
+
+/* ===== Camp cards ===== */
+.camp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:2rem}
+.camp{display:flex;flex-direction:column;background:var(--card);border:.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .22s,box-shadow .22s,border-color .22s}
+.camp:hover{transform:translateY(-5px);border-color:var(--blue);box-shadow:0 16px 36px rgba(18,58,99,.14)}
+.camp-top{padding:2.1rem 1.6rem;position:relative;overflow:hidden}
+.camp-top.football{background:linear-gradient(140deg,#0a2e57,#1560b8 70%,#2f7ad0)}
+.camp-top.badminton{background:linear-gradient(140deg,#7a3206,#e07b1f 70%,#f2a03c)}
+.camp-top::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.camp-emoji{font-size:2.6rem;display:block;margin-bottom:.7rem;position:relative;z-index:1}
+.camp-name{font-family:'Noto Serif TC',serif;font-size:1.45rem;font-weight:900;color:#fff;letter-spacing:.03em;position:relative;z-index:1;line-height:1.3}
+.camp-slogan{font-size:13px;color:rgba(255,255,255,.82);margin-top:6px;position:relative;z-index:1;letter-spacing:.05em}
+.camp-body{padding:1.5rem 1.6rem 1.7rem;flex:1;display:flex;flex-direction:column}
+.camp-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.cm{background:var(--card-light);border:.5px solid var(--border-soft);border-radius:99px;padding:5px 12px;font-size:12px;color:var(--text-body)}
+.camp-desc{font-size:13.5px;color:var(--text-body);line-height:1.75;flex:1}
+.camp-go{margin-top:1.1rem;font-size:14px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:6px}
+.camp-top.badminton ~ .camp-body .camp-go{color:var(--orange)}
+.camp-tag{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:99px;z-index:1}
+
+/* ===== Feature grid ===== */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:1.8rem}
+.fc{background:var(--card);border:.5px solid var(--border);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
+.fc:nth-child(2)::before{background:var(--amber)}
+.fc:nth-child(3)::before{background:var(--blue-deep)}
+.fc:nth-child(4)::before{background:var(--amber-light)}
+.fc:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 12px 28px rgba(18,58,99,.1)}
+.ft{font-family:'Noto Serif TC',serif;font-size:1.1rem;font-weight:700;color:var(--text-2);margin-bottom:5px}
+.fd{font-size:13px;color:var(--text-body);line-height:1.65}
+
+/* ===== Contact ===== */
+.contact-box{margin-top:1.9rem;background:var(--card);border:.5px solid var(--border);border-radius:14px;padding:1.6rem 1.7rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.2rem}
+.ci-label{font-size:11px;color:var(--text-faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.ci-val{font-size:14.5px;color:var(--text-2);font-weight:500;word-break:break-all}
+.ci-val a{color:var(--blue);text-decoration:none}
+.ci-val a:hover{text-decoration:underline}
+
+/* ===== CTA band ===== */
+.cta-band{padding:4.2rem 1.75rem;text-align:center;background:linear-gradient(135deg,#0f4183 0%,#1e63bd 100%);position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 20%,rgba(242,180,92,.18) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px;pointer-events:none}
+.cta-band>*{position:relative}
+.cta-band .st{color:#fff;margin-bottom:.5rem}
+.cta-band p{font-size:14.5px;color:#b8cde4;margin-bottom:1.7rem}
+
+/* ===== Footer ===== */
+footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fl{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:900;color:#eef4fb;letter-spacing:.04em}
+.fs{font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:.08em}
+.fi2{font-size:12px;color:#8ea6c4;text-align:right;line-height:1.95}
+.fi2 a{color:#8ea6c4;text-decoration:none}
+
+/* ===== Scroll reveal ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ===== Mobile ===== */
+@media (max-width:640px){
+  .nav{padding:0 1rem}
+  .nav-links{display:none}
+  .hero{padding:3.5rem 1.5rem 4rem}
+  footer{flex-direction:column;text-align:center}
+  .fi2{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="#top">Stay Young <span>運動團隊</span></a>
+  <div class="nav-links">
+    <a href="#camps">營隊</a>
+    <a href="#about">關於我們</a>
+    <a href="#contact">聯絡</a>
+  </div>
+  <a class="nav-cta" href="#camps">查看營隊</a>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-glow"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-badge">Stay Young Sports</div>
+  <h1>讓孩子<em>愛上運動</em></h1>
+  <p class="hero-sub">專業教練帶領的兒童運動營隊。零基礎友善、小班教學，讓每個孩子在球場上找到自己。</p>
+  <div class="hero-btns">
+    <a class="btn-amber" href="#camps">查看營隊 →</a>
+    <a class="btn-out" href="#about">關於我們</a>
+  </div>
+</section>
+
+<div class="divider">— 專業教練 · 零基礎友善 · 小班教學 —</div>
+
+<section class="sec" id="camps">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="sl">營隊總覽</div>
+      <div class="st">2027 寒假營隊</div>
+      <p class="ss">兩個營隊同步開放報名，各自有獨立的課程規劃與報名頁面。點擊卡片前往該營隊網站查看完整資訊。</p>
+    </div>
+    <div class="camp-grid">
+
+      <a class="camp reveal" href="https://ryan1109-d.github.io/football-camp/" target="_blank" rel="noopener">
+        <div class="camp-top football">
+          <span class="camp-tag">報名中</span>
+          <span class="camp-emoji">⚽</span>
+          <div class="camp-name">清華大學足球冬令營</div>
+          <div class="camp-slogan">追足夢想</div>
+        </div>
+        <div class="camp-body">
+          <div class="camp-meta">
+            <span class="cm">1/25 – 1/29</span>
+            <span class="cm">國小 3–6 年級</span>
+            <span class="cm">清大南大校區</span>
+            <span class="cm">全天班</span>
+          </div>
+          <p class="camp-desc">五天全天訓練，從最基本的觸球教起，由個人技術走向團隊配合。室內場地搭配室外操場，雨天照常上課；含營隊紀念衣與彈性接送。</p>
+          <div class="camp-go">前往營隊網站 →</div>
+        </div>
+      </a>
+
+      <a class="camp reveal d1" href="https://ryan1109-d.github.io/badminton-camp/" target="_blank" rel="noopener">
+        <div class="camp-top badminton">
+          <span class="camp-tag">報名中</span>
+          <span class="camp-emoji">🏸</span>
+          <div class="camp-name">台灣大學羽球冬令營</div>
+          <div class="camp-slogan">羽你同行</div>
+        </div>
+        <div class="camp-body">
+          <div class="camp-meta">
+            <span class="cm">1/25 – 1/29</span>
+            <span class="cm">小一 – 國三</span>
+            <span class="cm">台大體育館</span>
+            <span class="cm">早上／下午／整天</span>
+          </div>
+          <p class="camp-desc">教練學員比 1:10，當天依實際程度分階，零基礎與有底子都在對的難度學習。台大體育館室內場地，三時段彈性選擇；含紀念運動衫與責任保險。</p>
+          <div class="camp-go">前往營隊網站 →</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="about">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="sl">關於我們</div>
+      <div class="st">Stay Young 運動團隊</div>
+      <p class="ss">我們相信運動的起點不該有門檻。每一梯營隊都從最基本的動作教起，讓第一次接觸的孩子也能安心上場，也讓有基礎的孩子在對的難度裡繼續進步。</p>
+    </div>
+    <div class="fgrid">
+      <div class="fc reveal"><div class="ft">零基礎友善</div><div class="fd">課程從零開始設計，第一次接觸這項運動也能安心參加</div></div>
+      <div class="fc reveal d1"><div class="ft">小班教學</div><div class="fd">控制班級人數，每位學員都能獲得教練的關注</div></div>
+      <div class="fc reveal d2"><div class="ft">專業師資</div><div class="fd">具該項運動專業背景的教練團隊全程帶隊</div></div>
+      <div class="fc reveal d3"><div class="ft">家長掌握狀況</div><div class="fd">專屬家長群組，每日訓練花絮與各項通知即時同步</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="sl">聯絡我們</div>
+      <div class="st">有任何問題，歡迎聯繫</div>
+      <p class="ss">營隊內容、報名流程、費用與退費相關問題，都可以透過以下方式與我們聯繫。</p>
+    </div>
+    <div class="contact-box reveal">
+      <div>
+        <div class="ci-label">Email</div>
+        <div class="ci-val"><a href="mailto:stayyoung985@gmail.com">stayyoung985@gmail.com</a></div>
+      </div>
+      <div>
+        <div class="ci-label">聯絡人</div>
+        <div class="ci-val">張軒瑀 Ryan</div>
+      </div>
+      <div>
+        <div class="ci-label">電話</div>
+        <div class="ci-val"><a href="tel:0979032572">0979-032-572</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="reveal">
+    <div class="st">這個寒假，讓孩子上場</div>
+    <p>兩個營隊同步開放報名，額滿候補。</p>
+    <a class="btn-amber" href="#camps">查看營隊 →</a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="fl">Stay Young</div>
+    <div class="fs">兒童運動營隊</div>
+  </div>
+  <div class="fi2">
+    聯繫我們：stayyoung985@gmail.com<br>
+    張軒瑀 Ryan　0979-032-572
+  </div>
+</footer>
+
+<script>
+// 滾動浮現：進出視窗都重播
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    e.target.classList.toggle('visible', e.isIntersecting);
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
