@@ -13,20 +13,32 @@
 主站自訂網域：**stayyounglab.com**（Porkbun 管理 DNS，CNAME → `ryan1109-d.github.io`）。
 repo 根目錄的 `CNAME` 檔由 GitHub Pages 自動產生，**請勿刪除**。
 
-## 子站連結（路徑轉址）
+## 子站（各自擁有子網域）
 
-| 營隊 | 主站路徑 | Repo | 實際網址 |
-|------|---------|------|---------|
-| 清華大學足球冬令營 2027 | `/football/` | [football-camp](https://github.com/Ryan1109-d/football-camp) | https://ryan1109-d.github.io/football-camp/ |
-| 台灣大學羽球冬令營 2027 | `/badminton/` | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | https://ryan1109-d.github.io/badminton-camp/ |
+| 營隊 | 子網域 | Repo | 主站路徑（轉址） |
+|------|--------|------|----------------|
+| 清華大學足球冬令營 2027 | https://football.stayyounglab.com | [football-camp](https://github.com/Ryan1109-d/football-camp) | `/football/` |
+| 台灣大學羽球冬令營 2027 | https://badminton.stayyounglab.com | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | `/badminton/` |
 
 各營隊為**獨立 repo、獨立 GAS、獨立 Google Sheet**，主站只做連結，不含報名功能。
-`football/index.html` 與 `badminton/index.html` 是轉址頁（`location.replace` + `meta refresh` 雙保險），
-使用者從 `stayyounglab.com/football/` 進入後，網址列會變成該子站的 `github.io` 網址。
 
-> **若要讓網址列全程維持品牌網域**，改用子網域較乾淨：
-> Porkbun 加 CNAME `football` → `ryan1109-d.github.io`，
-> 並在 football-camp repo 的 Pages 設定 Custom domain 填 `football.stayyounglab.com`（羽球同理）。
+**全站不外露 github.io**：三種入口都會落在品牌網域
+
+1. 主頁卡片 → 直接連子網域
+2. `stayyounglab.com/football/` → 轉址頁導向子網域（保留舊連結相容）
+3. 有人直接開 `ryan1109-d.github.io/football-camp/` → GitHub 自動 301 到子網域
+
+### DNS 設定（Porkbun）
+
+| 類型 | 主機 | 目標 |
+|------|------|------|
+| CNAME | `@` | `ryan1109-d.github.io` |
+| CNAME | `www` | `ryan1109-d.github.io` |
+| CNAME | `football` | `ryan1109-d.github.io` |
+| CNAME | `badminton` | `ryan1109-d.github.io` |
+
+三個 repo 根目錄各有 GitHub 自動產生的 `CNAME` 檔，**請勿刪除**；
+在本機對子站套用修改前記得先 `git pull`。
 
 ## 設計基準
 
