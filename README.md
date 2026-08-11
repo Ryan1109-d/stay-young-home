@@ -8,14 +8,25 @@
 |------|------|
 | `index.html` | 單頁主站（Hero／營隊總覽／關於我們／聯絡／CTA） |
 
-## 子站連結
+## 網域
 
-| 營隊 | Repo | 網址 |
-|------|------|------|
-| 清華大學足球冬令營 2027 | [football-camp](https://github.com/Ryan1109-d/football-camp) | https://ryan1109-d.github.io/football-camp/ |
-| 台灣大學羽球冬令營 2027 | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | https://ryan1109-d.github.io/badminton-camp/ |
+主站自訂網域：**stayyounglab.com**（Porkbun 管理 DNS，CNAME → `ryan1109-d.github.io`）。
+repo 根目錄的 `CNAME` 檔由 GitHub Pages 自動產生，**請勿刪除**。
 
-> 各營隊為**獨立 repo、獨立 GAS、獨立 Google Sheet**，主站只做連結，不含報名功能。
+## 子站連結（路徑轉址）
+
+| 營隊 | 主站路徑 | Repo | 實際網址 |
+|------|---------|------|---------|
+| 清華大學足球冬令營 2027 | `/football/` | [football-camp](https://github.com/Ryan1109-d/football-camp) | https://ryan1109-d.github.io/football-camp/ |
+| 台灣大學羽球冬令營 2027 | `/badminton/` | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | https://ryan1109-d.github.io/badminton-camp/ |
+
+各營隊為**獨立 repo、獨立 GAS、獨立 Google Sheet**，主站只做連結，不含報名功能。
+`football/index.html` 與 `badminton/index.html` 是轉址頁（`location.replace` + `meta refresh` 雙保險），
+使用者從 `stayyounglab.com/football/` 進入後，網址列會變成該子站的 `github.io` 網址。
+
+> **若要讓網址列全程維持品牌網域**，改用子網域較乾淨：
+> Porkbun 加 CNAME `football` → `ryan1109-d.github.io`，
+> 並在 football-camp repo 的 Pages 設定 Custom domain 填 `football.stayyounglab.com`（羽球同理）。
 
 ## 設計基準
 
