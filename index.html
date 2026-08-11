@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stay Young 運動團隊｜兒童運動營隊</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-<meta name="description" content="Stay Young 運動團隊 — 專業教練帶領的兒童運動營隊。2027 寒假開設清華大學足球冬令營與台灣大學羽球冬令營，零基礎友善、小班教學。">
+<meta name="description" content="Stay Young 運動團隊 — 專業教練帶領的兒童運動營隊。新竹清華大學（足球、羽球）與台北台灣大學（羽球）三大梯次，零基礎友善、小班教學。">
 <style>
 :root{
   --bg:#ffffff;
@@ -68,10 +68,22 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 .st{font-family:'Noto Serif TC',serif;font-size:clamp(1.7rem,3.8vw,2.4rem);font-weight:900;margin-bottom:.9rem;line-height:1.25;letter-spacing:.04em}
 .ss{font-size:15px;color:var(--text-body);line-height:1.85;max-width:540px}
 
+/* ===== Region groups ===== */
+.region-block{margin-top:2.3rem}
+.region-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.7rem .9rem;padding-bottom:.8rem;margin-bottom:1.2rem;border-bottom:1px solid var(--border-soft)}
+.region-city{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.15rem;color:var(--text-2);letter-spacing:.05em;position:relative;padding-left:1.05rem;flex-shrink:0}
+.region-city::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-52%);width:7px;height:7px;border-radius:50%;background:var(--amber)}
+.region-school{font-size:12.5px;color:var(--text-muted);letter-spacing:.02em}
+
 /* ===== Camp cards ===== */
-.camp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:2rem}
+.camp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
 .camp{display:flex;flex-direction:column;background:var(--card);border:.5px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .22s,box-shadow .22s,border-color .22s}
 .camp:hover{transform:translateY(-5px);border-color:var(--blue);box-shadow:0 16px 36px rgba(18,58,99,.14)}
+@media (min-width:641px){
+  .camp.solo{flex-direction:row}
+  .camp.solo .camp-top{flex:0 0 300px;display:flex;flex-direction:column;justify-content:center}
+  .camp.solo .camp-body{flex:1;justify-content:center}
+}
 .camp-top{padding:2.1rem 1.6rem;position:relative;overflow:hidden}
 .camp-top.football{background:linear-gradient(140deg,#0a2e57,#1560b8 70%,#2f7ad0)}
 .camp-top.badminton{background:linear-gradient(140deg,#7a3206,#e07b1f 70%,#f2a03c)}
@@ -168,49 +180,85 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
     <div class="reveal">
       <div class="sl">營隊總覽</div>
       <div class="st">2027 寒假營隊</div>
-      <p class="ss">兩個營隊同步開放報名，各自有獨立的課程規劃與報名頁面。點擊卡片前往該營隊網站查看完整資訊。</p>
+      <p class="ss">三個梯次分佈新竹、台北兩地，各自建立獨立的營隊網站。點擊卡片前往查看完整課程資訊與報名方式。</p>
     </div>
-    <div class="camp-grid">
 
-      <a class="camp reveal" href="https://football.stayyounglab.com/">
-        <div class="camp-top football">
-          <span class="camp-tag">報名中</span>
-          <span class="camp-emoji">⚽</span>
-          <div class="camp-name">清華大學足球冬令營</div>
-          <div class="camp-slogan">追足夢想</div>
-        </div>
-        <div class="camp-body">
-          <div class="camp-meta">
-            <span class="cm">1/25 – 1/29</span>
-            <span class="cm">國小 3–6 年級</span>
-            <span class="cm">清大南大校區</span>
-            <span class="cm">全天班</span>
+    <div class="region-block reveal">
+      <div class="region-head">
+        <div class="region-city">新竹</div>
+        <div class="region-school">國立清華大學</div>
+      </div>
+      <div class="camp-grid">
+
+        <a class="camp reveal" href="https://football.stayyounglab.com/">
+          <div class="camp-top football">
+            <span class="camp-tag">報名中</span>
+            <span class="camp-emoji">⚽</span>
+            <div class="camp-name">清華大學足球冬令營</div>
+            <div class="camp-slogan">追足夢想</div>
           </div>
-          <p class="camp-desc">五天全天訓練，從最基本的觸球教起，由個人技術走向團隊配合。室內場地搭配室外操場，雨天照常上課；含營隊紀念衣與彈性接送。</p>
-          <div class="camp-go">前往營隊網站 →</div>
-        </div>
-      </a>
-
-      <a class="camp reveal d1" href="https://badminton.stayyounglab.com/">
-        <div class="camp-top badminton">
-          <span class="camp-tag">報名中</span>
-          <span class="camp-emoji">🏸</span>
-          <div class="camp-name">台灣大學羽球冬令營</div>
-          <div class="camp-slogan">羽你同行</div>
-        </div>
-        <div class="camp-body">
-          <div class="camp-meta">
-            <span class="cm">1/25 – 1/29</span>
-            <span class="cm">小一 – 國三</span>
-            <span class="cm">台大體育館</span>
-            <span class="cm">早上／下午／整天</span>
+          <div class="camp-body">
+            <div class="camp-meta">
+              <span class="cm">1/25 – 1/29</span>
+              <span class="cm">國小 3–6 年級</span>
+              <span class="cm">清大南大校區</span>
+              <span class="cm">全天班</span>
+            </div>
+            <p class="camp-desc">五天全天訓練，從最基本的觸球教起，由個人技術走向團隊配合。室內場地搭配室外操場，雨天照常上課；含營隊紀念衣與彈性接送。</p>
+            <div class="camp-go">前往營隊網站 →</div>
           </div>
-          <p class="camp-desc">教練學員比 1:10，當天依實際程度分階，零基礎與有底子都在對的難度學習。台大體育館室內場地，三時段彈性選擇；含紀念運動衫與責任保險。</p>
-          <div class="camp-go">前往營隊網站 →</div>
-        </div>
-      </a>
+        </a>
 
+        <a class="camp reveal d1" href="https://ryan1109-d.github.io/summarcamp/">
+          <div class="camp-top badminton">
+            <span class="camp-tag">即將公布</span>
+            <span class="camp-emoji">🏸</span>
+            <div class="camp-name">清華大學羽球冬令營</div>
+            <div class="camp-slogan">羽你同行</div>
+          </div>
+          <div class="camp-body">
+            <div class="camp-meta">
+              <span class="cm">清大南大校區</span>
+              <span class="cm">零基礎友善</span>
+              <span class="cm">小班教學</span>
+            </div>
+            <p class="camp-desc">與足球冬令營同校區開課，教練依實際程度分階帶領。梯次日期與收費資訊陸續公布中，最新進度以營隊網站為準。</p>
+            <div class="camp-go">前往營隊網站 →</div>
+          </div>
+        </a>
+
+      </div>
     </div>
+
+    <div class="region-block reveal">
+      <div class="region-head">
+        <div class="region-city">台北</div>
+        <div class="region-school">國立臺灣大學</div>
+      </div>
+      <div class="camp-grid">
+
+        <a class="camp solo reveal" href="https://badminton.stayyounglab.com/">
+          <div class="camp-top badminton">
+            <span class="camp-tag">報名中</span>
+            <span class="camp-emoji">🏸</span>
+            <div class="camp-name">台灣大學羽球冬令營</div>
+            <div class="camp-slogan">羽你同行</div>
+          </div>
+          <div class="camp-body">
+            <div class="camp-meta">
+              <span class="cm">1/25 – 1/29</span>
+              <span class="cm">小一 – 國三</span>
+              <span class="cm">台大體育館</span>
+              <span class="cm">早上／下午／整天</span>
+            </div>
+            <p class="camp-desc">教練學員比 1:10，當天依實際程度分階，零基礎與有底子都在對的難度學習。台大體育館室內場地，三時段彈性選擇；含紀念運動衫與責任保險。</p>
+            <div class="camp-go">前往營隊網站 →</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -257,7 +305,7 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
 <section class="cta-band">
   <div class="reveal">
     <div class="st">這個寒假，讓孩子上場</div>
-    <p>兩個營隊同步開放報名，額滿候補。</p>
+    <p>三個梯次，兩座城市，總有一個離孩子不遠。</p>
     <a class="btn-amber" href="#camps">查看營隊 →</a>
   </div>
 </section>
