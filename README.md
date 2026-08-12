@@ -17,8 +17,8 @@ repo 根目錄的 `CNAME` 檔由 GitHub Pages 自動產生，**請勿刪除**。
 
 | 營隊 | 子網域 | Repo | 主站路徑（轉址） |
 |------|--------|------|----------------|
-| 清華大學足球冬令營 2027 | https://football.stayyounglab.com | [football-camp](https://github.com/Ryan1109-d/football-camp) | `/football/` |
-| 台灣大學羽球冬令營 2027 | https://badminton.stayyounglab.com | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | `/badminton/` |
+| 清華大學足球冬令營 2027 | https://nthu-football.stayyounglab.com | [football-camp](https://github.com/Ryan1109-d/football-camp) | `/football/` |
+| 台灣大學羽球冬令營 2027 | https://ntu-badminton.stayyounglab.com | [badminton-camp](https://github.com/Ryan1109-d/badminton-camp) | `/badminton/` |
 
 各營隊為**獨立 repo、獨立 GAS、獨立 Google Sheet**，主站只做連結，不含報名功能。
 
