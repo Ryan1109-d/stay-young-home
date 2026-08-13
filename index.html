@@ -87,20 +87,19 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
   .camp.solo .camp-body{flex:1;justify-content:center}
 }
 .camp-top{padding:2.1rem 1.6rem;position:relative;overflow:hidden}
-.camp-top.football{background:linear-gradient(140deg,rgba(10,46,87,.88),rgba(21,96,184,.78) 65%,rgba(47,122,208,.72)),url('images/camp-football.jpg') center/cover no-repeat}
-.camp-top.badminton{background:linear-gradient(140deg,rgba(122,50,6,.88),rgba(224,123,31,.78) 65%,rgba(242,160,60,.72)),url('images/camp-badminton-nthu.jpg') center 30%/cover no-repeat}
-.camp-top.badminton.ntu{background:linear-gradient(140deg,rgba(122,50,6,.88),rgba(224,123,31,.78) 65%,rgba(242,160,60,.72)),url('images/camp-badminton-ntu.jpg') center 28%/cover no-repeat}
-.camp-top::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
-.camp-emoji{font-size:2.6rem;display:block;margin-bottom:.7rem;position:relative;z-index:1}
-.camp-name{font-family:'Noto Serif TC',serif;font-size:1.45rem;font-weight:900;color:#fff;letter-spacing:.03em;position:relative;z-index:1;line-height:1.3}
-.camp-slogan{font-size:13px;color:rgba(255,255,255,.82);margin-top:6px;position:relative;z-index:1;letter-spacing:.05em}
+.camp-top.football{background:url('images/camp-football.jpg') center/cover no-repeat}
+.camp-top.badminton{background:url('images/camp-badminton-nthu.jpg') center 30%/cover no-repeat}
+.camp-top.badminton.ntu{background:url('images/camp-badminton-ntu.jpg') center 28%/cover no-repeat}
+.camp-emoji{font-size:2.6rem;display:block;margin-bottom:.7rem;position:relative;z-index:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.camp-name{font-family:'Noto Serif TC',serif;font-size:1.45rem;font-weight:900;color:#fff;letter-spacing:.03em;position:relative;z-index:1;line-height:1.3;text-shadow:0 2px 6px rgba(0,0,0,.75),0 0 22px rgba(0,0,0,.5)}
+.camp-slogan{font-size:13px;color:#fff;margin-top:6px;position:relative;z-index:1;letter-spacing:.05em;text-shadow:0 1px 5px rgba(0,0,0,.8),0 0 16px rgba(0,0,0,.5)}
 .camp-body{padding:1.5rem 1.6rem 1.7rem;flex:1;display:flex;flex-direction:column}
 .camp-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
 .cm{background:var(--card-light);border:.5px solid var(--border-soft);border-radius:99px;padding:5px 12px;font-size:12px;color:var(--text-body)}
 .camp-desc{font-size:13.5px;color:var(--text-body);line-height:1.75;flex:1}
 .camp-go{margin-top:1.1rem;font-size:14px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:6px}
 .camp-top.badminton ~ .camp-body .camp-go{color:var(--orange)}
-.camp-tag{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:99px;z-index:1}
+.camp-tag{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.42);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.45);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:99px;z-index:1}
 
 /* ===== Feature grid ===== */
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:1.8rem}
