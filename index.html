@@ -71,11 +71,12 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 .ss{font-size:15px;color:var(--text-body);line-height:1.85;max-width:540px}
 
 /* ===== Region groups ===== */
-.region-block{margin-top:2.3rem}
-.region-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.7rem .9rem;padding-bottom:.8rem;margin-bottom:1.2rem;border-bottom:1px solid var(--border-soft)}
-.region-city{font-family:'Noto Serif TC',serif;font-weight:900;font-size:1.15rem;color:var(--text-2);letter-spacing:.05em;position:relative;padding-left:1.05rem;flex-shrink:0}
-.region-city::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-52%);width:7px;height:7px;border-radius:50%;background:var(--amber)}
-.region-school{font-size:12.5px;color:var(--text-muted);letter-spacing:.02em}
+.region-block{margin-top:4.2rem}
+.region-block:first-of-type{margin-top:2.6rem}
+.region-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.45rem 1.05rem;padding:0 0 1.05rem 1.15rem;margin-bottom:1.6rem;border-bottom:1px solid var(--border-soft);position:relative}
+.region-head::before{content:'';position:absolute;left:0;top:.12em;bottom:1.4rem;width:4px;border-radius:2px;background:linear-gradient(180deg,var(--amber),var(--amber-light))}
+.region-city{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(1.55rem,3.2vw,1.9rem);color:var(--text-2);letter-spacing:.06em;line-height:1.15;flex-shrink:0}
+.region-school{font-size:13.5px;color:var(--text-muted);letter-spacing:.04em;font-weight:500}
 
 /* ===== Camp cards ===== */
 .camp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
@@ -88,7 +89,7 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 }
 .camp-top{padding:2.1rem 1.6rem;position:relative;overflow:hidden}
 .camp-top.football{background:url('images/camp-football.jpg') center/cover no-repeat}
-.camp-top.badminton{background:url('images/camp-badminton-nthu.jpg') center 30%/cover no-repeat}
+.camp-top.badminton{background:url('images/camp-badminton-nthu.jpg') center 48%/cover no-repeat}
 .camp-top.badminton.ntu{background:url('images/camp-badminton-ntu.jpg') center 28%/cover no-repeat}
 .camp-emoji{font-size:2.6rem;display:block;margin-bottom:.7rem;position:relative;z-index:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
 .camp-name{font-family:'Noto Serif TC',serif;font-size:1.45rem;font-weight:900;color:#fff;letter-spacing:.03em;position:relative;z-index:1;line-height:1.3;text-shadow:0 2px 6px rgba(0,0,0,.75),0 0 22px rgba(0,0,0,.5)}
