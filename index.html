@@ -45,20 +45,22 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 .nav-right{flex:1 1 0;display:flex;justify-content:flex-end}
 
 /* ===== Hero ===== */
-.hero{padding:5rem 1.75rem 5.5rem;text-align:center;position:relative;overflow:hidden;background:linear-gradient(180deg,#0a2e57 0%,#0f4183 40%,#2470c9 78%,#5ba4f0 100%)}
+.hero{padding:2.2rem 1.75rem 3.4rem;text-align:center;position:relative;overflow:hidden;background:#fff}
+.hero-banner{max-width:1080px;margin:0 auto 1.9rem}
+.hero-banner img{display:block;width:100%;height:auto}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 75% 60% at 50% 0%,rgba(106,165,221,.25) 0%,transparent 70%),radial-gradient(ellipse 45% 45% at 88% 92%,rgba(242,180,92,.18) 0%,transparent 60%);pointer-events:none}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 95%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 95%)}
 .hero>*{position:relative;z-index:1}
 .hero-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);color:#f2b45c;font-size:.8rem;font-weight:700;letter-spacing:.15em;padding:.42rem 1.4rem;border-radius:20px;margin-bottom:1.7rem;text-transform:uppercase}
-.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(2.8rem,8vw,4.6rem);font-weight:900;line-height:1.12;margin-bottom:1.2rem;letter-spacing:.03em;color:#fff}
-.hero h1 em{color:#f2b45c;font-style:normal;position:relative;display:inline-block}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,5.2vw,3rem);font-weight:900;line-height:1.2;margin-bottom:1rem;letter-spacing:.03em;color:var(--text-2)}
+.hero h1 em{color:var(--blue);font-style:normal;position:relative;display:inline-block}
 .hero h1 em::after{content:'';position:absolute;left:-2%;right:-2%;bottom:.08em;height:.22em;background:rgba(240,147,15,.4);z-index:0;border-radius:3px;transform:rotate(-1deg)}
-.hero-sub{font-size:17px;color:#c3d6ee;line-height:1.85;max-width:480px;margin:0 auto 2.4rem}
+.hero-sub{font-size:16px;color:var(--text-body);line-height:1.85;max-width:500px;margin:0 auto 2.1rem}
 .hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn-amber{display:inline-block;background:var(--amber);color:#1c2733;border:none;border-radius:8px;padding:.9rem 2.4rem;font-size:1rem;font-weight:700;letter-spacing:.05em;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
 .btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,147,15,.45)}
-.btn-out{display:inline-block;background:transparent;color:#cfe0f2;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:.9rem 1.9rem;font-size:1rem;cursor:pointer;text-decoration:none;transition:background .2s}
-.btn-out:hover{background:rgba(255,255,255,.1)}
+.btn-out{display:inline-block;background:transparent;color:var(--blue);border:1px solid var(--border);border-radius:8px;padding:.9rem 1.9rem;font-size:1rem;cursor:pointer;text-decoration:none;transition:background .2s}
+.btn-out:hover{background:var(--bg-alt)}
 
 .divider{text-align:center;padding:.7rem;font-size:11px;color:#6b87a3;letter-spacing:.07em;background:#e8eef5;border-bottom:.5px solid var(--border)}
 
@@ -165,9 +167,9 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
 </nav>
 
 <section class="hero" id="top">
-  <div class="hero-glow"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-badge">Stay Young Sports</div>
+  <div class="hero-banner">
+    <img src="images/hero-banner.jpg" alt="Stay Young 運動團隊 — 足球、羽球、籃球等兒童運動營隊">
+  </div>
   <h1>讓孩子<em>愛上運動</em></h1>
   <p class="hero-sub">專業教練帶領的兒童運動營隊。零基礎友善、小班教學，讓每個孩子在球場上找到自己。</p>
   <div class="hero-btns">
@@ -196,7 +198,6 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
         <a class="camp reveal" href="https://nthu-football.stayyounglab.com/">
           <div class="camp-top football">
             <span class="camp-tag">報名中</span>
-            <span class="camp-emoji">⚽</span>
             <div class="camp-name">清華大學足球冬令營</div>
             <div class="camp-slogan">追足夢想</div>
           </div>
@@ -215,7 +216,6 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
         <a class="camp reveal d1" href="https://nthu-badminton.stayyounglab.com/">
           <div class="camp-top badminton">
             <span class="camp-tag">即將公布</span>
-            <span class="camp-emoji">🏸</span>
             <div class="camp-name">清華大學羽球冬令營</div>
             <div class="camp-slogan">羽你同行</div>
           </div>
@@ -243,7 +243,6 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
         <a class="camp solo reveal" href="https://ntu-badminton.stayyounglab.com/">
           <div class="camp-top badminton ntu">
             <span class="camp-tag">報名中</span>
-            <span class="camp-emoji">🏸</span>
             <div class="camp-name">台灣大學羽球冬令營</div>
             <div class="camp-slogan">羽你同行</div>
           </div>
