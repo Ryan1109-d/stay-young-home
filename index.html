@@ -68,7 +68,7 @@
   --text:#1c2733;
   --text-2:#22303f;
   --text-body:#5a6b7c;
-  --text-muted:#7b8a99;
+  --text-muted:#5f7182;
   --text-faint:#9aa7b3;
   --blue:#1560b8;
   --blue-deep:#0f3f7d;
@@ -292,7 +292,7 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
     <div class="region-block reveal">
       <div class="region-head">
         <div class="region-city">台北</div>
-        <div class="region-school">國立臺灣大學</div>
+        <div class="region-school">國立台灣大學</div>
       </div>
       <div class="camp-grid">
 
@@ -360,10 +360,6 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
       </div>
       <div>
         <div class="ci-label">聯絡電話</div>
-        <div class="ci-val">0979-032-572</div>
-      </div>
-      <div>
-        <div class="ci-label">電話</div>
         <div class="ci-val"><a href="tel:0979032572">0979-032-572</a></div>
       </div>
     </div>
@@ -393,7 +389,14 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
 // 滾動浮現：進出視窗都重播
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    e.target.classList.toggle('visible', e.isIntersecting);
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.addEventListener('transitionend', () => {
+        e.target.classList.remove('reveal', 'visible');
+        e.target.style.opacity = '';
+        e.target.style.transform = '';
+      }, { once: true });
+    }
   });
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
