@@ -105,6 +105,13 @@ body{font-family:'Noto Sans TC',-apple-system,"PingFang TC","Microsoft JhengHei"
 .camp-tag{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.42);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.45);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:4px 11px;border-radius:99px;z-index:1}
 
 /* ===== Feature grid ===== */
+.stat-row{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-top:1.9rem;padding:1.5rem 1.7rem;background:var(--card);border:.5px solid var(--border);border-radius:14px}
+.stat-num{font-family:'Noto Serif TC',serif;font-size:clamp(2.6rem,6vw,3.4rem);font-weight:900;color:var(--blue);line-height:1;letter-spacing:.02em}
+.stat-num span{font-size:.55em;margin-left:2px;color:var(--amber)}
+.stat-lab{font-size:12.5px;color:var(--text-muted);letter-spacing:.12em;margin-top:6px}
+.stat-sep{width:1px;align-self:stretch;background:var(--border-soft)}
+.stat-txt{flex:1;min-width:220px;font-size:14.5px;color:var(--text-body);line-height:1.85}
+@media (max-width:640px){.stat-sep{display:none}}
 .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:1.8rem}
 .fc{background:var(--card);border:.5px solid var(--border);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
 .fc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue)}
@@ -270,6 +277,16 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
       <div class="sl">關於我們</div>
       <div class="st">Stay Young 運動團隊</div>
       <p class="ss">我們相信運動的起點不該有門檻。每一梯營隊都從最基本的動作教起，讓第一次接觸的孩子也能安心上場，也讓有基礎的孩子在對的難度裡繼續進步。</p>
+    </div>
+    <div class="stat-row reveal">
+      <div>
+        <div class="stat-num">500<span>+</span></div>
+        <div class="stat-lab">累計服務學員</div>
+      </div>
+      <div class="stat-sep"></div>
+      <p class="stat-txt">從羽球營隊起步至今，我們累計帶過超過 500 位孩子。同一套從零教起、分階帶領的方法，現在也用在足球與其他項目上。</p>
+    </div>
+    <div class="reveal">
     </div>
     <div class="fgrid">
       <div class="fc reveal"><div class="ft">零基礎友善</div><div class="fd">課程從零開始設計，第一次接觸這項運動也能安心參加</div></div>
