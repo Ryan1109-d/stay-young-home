@@ -4,6 +4,22 @@
 <!-- GSC 驗證改由 DNS TXT 記錄負責（Porkbun，網域資源涵蓋所有子網域），此處不再放 meta -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 內容安全政策：限制這個頁面能載入 / 連線到哪些來源。
+     萬一頁面上被塞進第三方腳本，它也連不出去，報名個資帶不走。
+     ⚠️ 改動外部資源（換字型、換圖床、換 GAS 網址）時要同步更新這裡，
+        否則資源會被瀏覽器擋掉。frame-ancestors 只能靠 HTTP 標頭，
+        GitHub Pages 設不了，故未列入。 -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https://res.cloudinary.com https://www.googletagmanager.com https://*.google-analytics.com;
+  connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.googleusercontent.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com;
+  form-action 'none';
+  base-uri 'self';
+  object-src 'none';
+">
 <!-- Meta（Facebook）網域驗證。必須是靜態寫在 <head> 內、不可由 JS 動態插入，否則驗證會失敗。請勿移除。 -->
 <meta name="facebook-domain-verification" content="7njmma1gnlx0dij2pboifauutd8fey" />
 <!-- Google tag (gtag.js) -->
