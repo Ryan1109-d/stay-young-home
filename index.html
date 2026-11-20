@@ -297,7 +297,7 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
 <body>
 <noscript><img height="1" width="1" style="display:none" alt=""
  src="https://www.facebook.com/tr?id=2556852811454390&amp;ev=PageView&amp;noscript=1"></noscript>
-<a class="promo-bar" href="#about"><span class="pb-dot"></span><b>冬令營早鳥優惠中</b>　11/22 前報名享優惠價　·　推薦朋友，雙方各折 $500<span class="pb-go">看優惠說明 →</span></a>
+<a class="promo-bar" href="#about"><span class="pb-dot"></span><b>冬令營早鳥優惠中</b>　各營隊截止日不同，最晚至 11/29　·　推薦朋友，雙方各折 $500<span class="pb-go">看優惠說明 →</span></a>
 
 <nav class="nav">
   <a class="nav-logo" href="#top"><img src="images/logo-mark.png" alt="Stay Young">Stay Young <span>運動團隊</span></a>
@@ -460,7 +460,7 @@ footer{background:#092b52;padding:2.1rem 1.75rem;display:flex;justify-content:sp
     <div class="fgrid">
       <div class="fc reveal">
         <div class="ft">早鳥優惠</div>
-        <div class="fd">於 <b>2026/11/22（含）前</b>完成報名者，不限身份自動適用，折抵 <b>NT$500</b>。與「團報 5 人」「校內教職員」「特約合作企業員工」同屬優惠身份，<b>擇一適用</b>，彼此不可併用。</div>
+        <div class="fd">於各營隊的早鳥期限內完成報名者，不限身份自動適用，折抵 <b>NT$500</b>。期限各營隊不同：<b>清大足球 2026/11/22（含）前</b>、<b>台大羽球 2026/11/29（含）前</b>，清大羽球沒有早鳥優惠。與「團報 5 人」「校內教職員」「特約合作企業員工」同屬優惠身份，<b>擇一適用</b>，彼此不可併用。</div>
       </div>
       <div class="fc reveal d1">
         <div class="ft">推薦人制度</div>
@@ -539,7 +539,8 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 <script>
 // 早鳥截止後自動移除頂部橫幅（僅影響顯示；實際收費由後端依報名時間判定）
 (function(){
-  var end = new Date('2026-11-22T23:59:59+08:00');
+  // 取各營隊中最晚的早鳥截止日（目前為台大羽球 11/29）；足球是 11/22，各自的頁面會各自判定
+  var end = new Date('2026-11-29T23:59:59+08:00');
   if (new Date() > end) {
     var b = document.querySelector('.promo-bar');
     if (b) b.parentNode.removeChild(b);
